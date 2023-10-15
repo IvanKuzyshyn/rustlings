@@ -50,9 +50,6 @@ impl State {
             Message::Echo(s) => self.echo(s),
             Message::Move(point) => self.move_position(point)
         }
-        // TODO: create a match expression to process the different message variants
-        // Remember: When passing a tuple as a function argument, you'll need extra parentheses:
-        // fn function((t, u, p, l, e))
     }
 }
 
