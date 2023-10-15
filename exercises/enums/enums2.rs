@@ -7,7 +7,10 @@
 
 #[derive(Debug)]
 enum Message {
-    // TODO: define the different variants used below
+    Move {x: i16, y: i16},
+    Echo(String),
+    ChangeColor(i16, i16, i16),
+    Quit
 }
 
 impl Message {
@@ -24,6 +27,7 @@ fn main() {
         Message::Quit,
     ];
 
+    println!("Testing message:");
     for message in &messages {
         message.call();
     }
