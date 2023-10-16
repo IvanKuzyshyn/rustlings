@@ -5,14 +5,11 @@
 // I AM NOT DONE
 
 pub fn animal_habitat(animal: &str) -> &'static str {
-    let identifier = if animal == "crab" {
-        1
-    } else if animal == "gopher" {
-        2.0
-    } else if animal == "snake" {
-        3
-    } else {
-        "Unknown"
+    let identifier = match animal {
+        "crab" => 1,
+        "gopher" => 2,
+        "snake" => 3,
+        _ => 0
     };
 
     // DO NOT CHANGE THIS STATEMENT BELOW
